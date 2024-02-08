@@ -274,6 +274,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 estadisticas[jugador].victorias++;
                 if (modoIAActivo || modoRandomActivo) {
                     estadisticas['IA'].derrotas++;
+                } else if (modoJugadoresActivo) {
+                    estadisticas['O'].derrotas++;
                 }
             } else if (jugador === null) {
                 estadisticas['X'].empates++;
