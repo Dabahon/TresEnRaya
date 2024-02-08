@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
+    <title>3 en raya</title>
+</head>
+
+<body>
+    <header>
+        <h1>3 en Raya</h1>
+        <h2>El videojuego</h2>
+    </header>
+    <main>
+        <section class="menuPrincipal">
+            <div class="fichas">
+                <button type="button" id="seisFichas">6 fichas</button>
+                <button type="button" id="nueveFichas">9 fichas</button>
+            </div>
+            <div class="jugadores">
+                <button type="button" id="modoRandom">1 vs aleatorio</button>
+                <button type="button" id="modoIA">1 vs IA</button>
+                <button type="button" id="modoJugadores">2 jugadores</button>
+            </div>
+        </section>
+        <div class="accion">
+            <button id="empezar" type="button">Empezar Partida</button>
+        </div>
+        <section class="juego">
+            <div id="tablero"></div>
+            <div class="tiempos">
+                <div id="tiempoTotal"></div>
+                <div id="tiempoTurno"></div>
+                <div id="activa"></div>
+                <div class="estadisticas"></div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <button id="reiniciar" class="accion">Empezar de nuevo</button>
+        <button id="resetearEstadisticas" class="accion">Resetear Estadisticas</button>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cute Font', sans-serif;
+    background-color: #f0f8ff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    font-size: 32px;
+    background-color: dodgerblue;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+header h1 {
+    font-size: 50px;
+    background-color: dodgerblue;
+
+}
+
+header h2 {
+    font-size: 50px;
+    color: white;
+    background-color: dodgerblue;
+
+}
+
+main {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.menuPrincipal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+
+}
+
+.fichas {
+    display: flex;
+    gap: 50px;
+}
+
+.jugadores {
+    display: flex;
+    gap: 50px;
+}
+
+button {
+    font-size: 22px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(30, 144, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+button:active {
+    transform: translate(0em, 0.2em);
+}
+
+#tablero {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    width: 300px;
+}
+
+#tablero div {
+    border: 0.5px solid dodgerblue;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    font-family: 'Dokdo', system-ui;
+    font-size: 60px;
+}
+
+#tablero div:hover {
+    scale: 1.05;
+}
+
+.juego {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.tiempos {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#tablero div.seleccionada {
+    background-color: #add8e6;
+}
+
+.tabla-estadisticas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-estadisticas th,
+.tabla-estadisticas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla-estadisticas th {
+    background-color: #f4f4f4;
+}
+
+.tabla-estadisticas td {
+    color: #333;
+}
+
+.tabla-estadisticas tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-estadisticas tr:hover {
+    background-color: #ddd;
+}
+.accion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accion button {
+    width: 10.5em;
+    border-radius: 4px;
+    font-size: 22px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: dodgerblue;
+}
+.accion button:hover {
+    scale: 1.05;
+}
+
+.accion button::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #9EDB77 0%, #9EDB77 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.accion button:hover::before {
+    width: 10.5em;
+}
+
+footer button {
+    width: 10.5em;
+    border-radius: 4px;
+    font-size: 22px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: dodgerblue;
+}
+footer button:hover {
+    scale: 1.05;
+}
+
+footer button::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #9EDB77 0%, #9EDB77 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+footer button:hover::before {
+    width: 10.5em;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    header h1,
+    header h2 {
+        font-size: 30px;
+    }
+
+    header {
+        height: 50px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .menuPrincipal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fichas,
+    .jugadores {
+        display: flex;
+        gap: 10px;
+
+    }
+
+    .juego {
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    #tablero {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #tablero div {
+        height: 80px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+}
